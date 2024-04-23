@@ -84,21 +84,21 @@ export default function Intro() {
           Contact me here <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
         <a
-          className="bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110  active:scale-105 transition group cursor-pointer borderBlack mx-2"
+          className="bg-white dark:bg-white/10 px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110  active:scale-105 transition group cursor-pointer borderBlack mx-2"
           href="/CV.pdf"
           download
         >
           Download CV <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
         </a>
         <a
-          className="p-4 flex items-center gap-2 text-gray-700 rounded-full borderBlack mx-2 bg-white focus:scale-[1.15] hover:scale-[1.15]  active:scale-105 transition hover:text-gray-950"
+          className="p-4 flex dark:text-white/60 dark:bg-white/10 items-center gap-2 text-gray-700 rounded-full borderBlack mx-2 bg-white focus:scale-[1.15] hover:scale-[1.15]  active:scale-105 transition hover:text-gray-950"
           href="https://linkedin.com/in/kgb-87"
           target="_blank"
         >
           <BsLinkedin />
         </a>
         <a
-          className="p-4 flex items-center gap-2 text-gray-700 text-[1.35rem] rounded-full borderBlack mx-2 bg-white focus:scale-[1.15] hover:scale-[1.15]  active:scale-105 transition hover:text-gray-950"
+          className="p-4 flex dark:bg-white/10 dark:text-white/60 items-center gap-2 text-gray-700 text-[1.35rem] rounded-full borderBlack mx-2 bg-white focus:scale-[1.15] hover:scale-[1.15]  active:scale-105 transition hover:text-gray-950"
           href="https://github.com/gilbertkyle"
           target="_blank"
         >

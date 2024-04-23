@@ -5,3 +5,10 @@
 .borderBlack {
     @apply border border-black/10
 }
+html {
+    --line-color: #e5eyeb
+}
+
+html.dark {
+    --line-color: rgba(255,255,255,.2)
+}

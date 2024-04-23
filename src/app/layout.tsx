@@ -7,6 +7,7 @@ import ActiveSectionContextProvider from "../context/ActiveSectionContext";
 import { Toaster } from "react-hot-toast";
 import Footer from "@/components/Footer";
 import ThemeSwitch from "@/components/ThemeSwitch";
+import ThemeContextProvider from "@/context/ThemeContext";
 
 export const metadata: Metadata = {
   title: "Kyle Gilbert | Personal Portfolio",
@@ -21,13 +22,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       >
         <div className="bg-[#fbe2e3] absolute top-[-6rem] right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] -z-10 dark:bg-[#946263]"></div>
         <div className="bg-[#dbd7fd] absolute top-[-1rem] left-[-25rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] -z-10 dark:bg-[#676394]"></div>
-        <ActiveSectionContextProvider>
-          <Navbar />
-          {children}
-          <Footer />
-          <Toaster />
-          <ThemeSwitch />
-        </ActiveSectionContextProvider>
+        <ThemeContextProvider>
+          <ActiveSectionContextProvider>
+            <Navbar />
+            {children}
+            <Footer />
+            <Toaster />
+            <ThemeSwitch />
+          </ActiveSectionContextProvider>
+        </ThemeContextProvider>
       </body>
     </html>
   );
