@@ -5,8 +5,29 @@ import { LuGraduationCap } from "react-icons/lu";
 import corpcommentImg from "@public/corpcomment.png";
 import rmtdevImg from "@public/rmtdev.png";
 import wordanalyticsImg from "@public/wordanalytics.png";
+import type { StaticImageData } from "next/image";
 
-export const links = [
+type Project = {
+  title: string;
+  description: string;
+  tags: string[];
+  imageUrl: StaticImageData;
+};
+
+type Link = {
+  name: string;
+  hash: string;
+};
+
+type Experience = {
+  title: string;
+  description: string;
+  location: string;
+  icon: React.ReactNode;
+  date: string;
+};
+
+export const links: Link[] = [
   {
     name: "Home",
     hash: "#home",
@@ -33,7 +54,21 @@ export const links = [
   },
 ] as const;
 
-export const experiencesData = [
+export const experiencesData: Experience[] = [
+  {
+    title: "Graduated from San Jose State University",
+    location: "San Jose, CA",
+    description: "I graduated with a BS in Economics with honors.",
+    icon: React.createElement(LuGraduationCap),
+    date: "2013",
+  },
+  {
+    title: "Graduated Bootcamp",
+    location: "New York City, NY",
+    description: "I graduated after an intensive 13-week course",
+    icon: React.createElement(LuGraduationCap),
+    date: "2022",
+  },
   {
     title: "Graduated bootcamp",
     location: "Miami, FL",
@@ -59,7 +94,13 @@ export const experiencesData = [
   },
 ] as const;
 
-export const projectsData = [
+export const projectsData: Project[] = [
+  {
+    title: "FantasyFive",
+    description: "Weekly Draft Fantasy Football site.",
+    tags: ["React", "Next.js", "PostgreSQL", "Tailwind", "Drizzle", "Typescript", "AWS"],
+    imageUrl: corpcommentImg, // CHANGE THIS IN PROD
+  },
   {
     title: "CorpComment",
     description:
@@ -83,8 +124,8 @@ export const projectsData = [
   },
 ] as const;
 
-export const skillsData = [
-  "HTML",
+export const skillsData: string[] = [
+  "HTML5",
   "CSS",
   "JavaScript",
   "TypeScript",
@@ -94,6 +135,7 @@ export const skillsData = [
   "Git",
   "Tailwind",
   "Prisma",
+  "Drizzle",
   "MongoDB",
   "Redux",
   "GraphQL",
